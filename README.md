@@ -233,7 +233,7 @@ Este proyecto está licenciado bajo la **Licencia MIT**. Consulta el archivo LIC
 Para consultas, contacta a:
 
 - **Mantenedor**: \[Tu Nombre, e.g., sasamile\]
-- **Correo**: \[Tu Correo, e.g., sasamile@example.com\]
+- **Correo**: \[Tu Correo, e.g., nspes2020@gmail.com\]
 - **Issues en GitHub**: https://github.com/sasamile/UNIMINUTO-CACTO/issues
 
 ---
