@@ -1,363 +1,241 @@
 ### Enlace CMS: https://cms-cacto-uniminuto.vercel.app/
 ### Enlace UI : https://ui-cacto.vercel.app/
 
-UNIMINUTO-CACTO Project
 
-Overview
+# 🎨 Proyecto UNIMINUTO-CACTO
 
-The UNIMINUTO-CACTO project is a web application developed for the Centro de Cultura, Arte y Tradiciones de Oriente (CACTO) at UNIMINUTO, aimed at promoting art, culture, and traditions through digital platforms. The project consists of two main components:
+Bienvenido al **Proyecto UNIMINUTO-CACTO**, una aplicación web para el **Centro de Cultura, Arte y Tradiciones de Oriente (CACTO)** de UNIMINUTO. Esta plataforma promueve el arte, la cultura y las tradiciones mediante un **Sistema de Gestión de Contenidos (CMS)** y una **Interfaz de Usuario (UI)** interactiva.
 
+📌 **Repositorios**:
 
+- CMS-Centro-de-Arte-Cultura-Y-Tradicion-de-Oriente
+- UI_Project
 
+---
 
+## Tabla de Contenidos
 
-CMS-Centro-de-Arte-Cultura-Y-Tradicion-de-Oriente: A Content Management System (CMS) to manage cultural and artistic content, events, and resources.
+- Descripción General
+- Características
+- Tecnologías Utilizadas
+- Estructura del Proyecto
+- Instalación
+- Uso
+- Contribuir
+- Licencia
+- Contacto
 
+---
 
+## Descripción General
 
-UI_Project: A user interface (UI) providing an interactive front-end for users to explore CACTO's cultural offerings.
+El proyecto **UNIMINUTO-CACTO** digitaliza y difunde las actividades culturales del Centro de Cultura, Arte y Tradiciones de Oriente. Está compuesto por dos módulos:
 
-This project is hosted on GitHub at sasamile/UNIMINUTO-CACTO.
+- **CMS**: Sistema para administrar eventos, artículos y recursos culturales.
+- **UI**: Interfaz interactiva para que los usuarios exploren contenido cultural.
 
-Table of Contents
+---
 
+## Características
 
+### 🖥️ CMS
 
+- **Gestión de Contenidos**: Administra eventos, artículos y medios culturales.
+- **Autenticación de Usuarios**: Inicio de sesión seguro para administradores.
+- **Integración con Base de Datos**: Almacena contenido de forma estructurada.
+- **APIs RESTful**: Endpoints para interactuar con la UI.
 
+### 📱 UI
 
-Features
+- **Diseño Responsivo**: Interfaz adaptable a dispositivos móviles y de escritorio.
+- **Exhibición Cultural**: Muestra eventos, galerías, noticias y testimonios.
+- **Elementos Interactivos**: Incluye carruseles, galerías de imágenes y secciones dinámicas.
+- **Integración con CMS**: Obtiene contenido mediante APIs.
 
+---
 
+## Tecnologías Utilizadas
 
-Technologies Used
+- **CMS**:
+  - **Framework**: Next.js
+  - **Lenguaje**: TypeScript
+  - **Estilos**: Tailwind CSS
+  - **Autenticación**: NextAuth (o similar, por confirmar)
+  - **APIs**: RESTful API (integrada con Next.js)
+- **UI**:
+  - **Framework**: Next.js
+  - **Lenguaje**: TypeScript
+  - **Estilos**: Tailwind CSS
+  - **Componentes**: Carruseles, galerías, secciones dinámicas
+- **Otras Herramientas**:
+  - **Control de Versiones**: Git, GitHub
+  - **Gestor de Paquetes**: npm
 
+---
 
+## Estructura del Proyecto
 
-Project Structure
-
-
-
-Installation
-
-
-
-Usage
-
-
-
-Contributing
-
-
-
-License
-
-
-
-Contact
-
-Features
-
-CMS Component
-
-
-
-
-
-Content Management: Create, update, and delete articles, events, and media related to cultural activities.
-
-
-
-User Authentication: Secure login for administrators to manage content.
-
-
-
-Database Integration: Stores content in a structured database for efficient retrieval.
-
-
-
-API Endpoints: Provides RESTful APIs for interaction with the UI component.
-
-UI Component
-
-
-
-
-
-Responsive Design: User-friendly interface adaptable to desktop and mobile devices.
-
-
-
-Cultural Showcase: Displays events, galleries, and cultural information dynamically.
-
-
-
-Interactive Elements: Includes forms, navigation menus, and media galleries for enhanced user engagement.
-
-
-
-Integration with CMS: Fetches content from the CMS via API calls.
-
-Technologies Used
-
-
-
-
-
-CMS:
-
-
-
-
-
-Backend: [e.g., Node.js, Express, PHP, or specify the framework used]
-
-
-
-Database: [e.g., MySQL, MongoDB, or specify the database]
-
-
-
-Authentication: [e.g., JWT, OAuth, or specify the method]
-
-
-
-APIs: RESTful API
-
-
-
-UI:
-
-
-
-
-
-Frontend: [e.g., React, Angular, HTML/CSS/JavaScript, or specify the framework]
-
-
-
-Styling: [e.g., Bootstrap, Tailwind CSS, or custom CSS]
-
-
-
-API Client: [e.g., Axios, Fetch API]
-
-
-
-Other Tools:
-
-
-
-
-
-Version Control: Git, GitHub
-
-
-
-Deployment: [e.g., Heroku, Netlify, or specify the platform, if applicable]
-
-Project Structure
-
+```plaintext
 UNIMINUTO-CACTO/
 ├── CMS-Centro-de-Arte-Cultura-Y-Tradicion-de-Oriente/
-│   ├── [e.g., src/]          # Source code for the CMS backend
-│   ├── [e.g., config/]       # Configuration files (e.g., database, environment)
-│   ├── [e.g., routes/]       # API route definitions
-│   ├── [e.g., models/]       # Database models
-│   └── README.md             # CMS-specific documentation (if separate)
+│   ├── actions/              # Acciones del servidor (Next.js)
+│   ├── app/                  # Rutas y páginas principales
+│   ├── components/           # Componentes reutilizables
+│   ├── constants/            # Constantes y datos estáticos
+│   ├── hooks/                # Hooks personalizados
+│   ├── lib/                  # Utilidades y bibliotecas
+│   ├── public/               # Recursos estáticos (imágenes, fuentes)
+│   ├── schemas/              # Esquemas de validación
+│   ├── stores/               # Gestión de estado
+│   ├── utils/                # Funciones de utilidad
+│   ├── auth.config.ts        # Configuración de autenticación
+│   ├── middleware.ts         # Middleware de Next.js
+│   ├── next.config.mjs       # Configuración de Next.js
+│   ├── package.json          # Dependencias del proyecto
+│   ├── routes.ts             # Definición de rutas
+│   ├── tailwind.config.ts    # Configuración de Tailwind CSS
+│   ├── tsconfig.json         # Configuración de TypeScript
+│   └── README.md             # Documentación del CMS
 ├── UI_Project/
-│   ├── [e.g., src/]          # Source code for the UI frontend
-│   ├── [e.g., public/]       # Static assets (e.g., images, fonts)
-│   ├── [e.g., components/]   # Reusable UI components
-│   └── README.md             # UI-specific documentation (if separate)
-└── README.md                 # Main project documentation (this file)
+│   ├── app/                  # Rutas y páginas principales
+│   ├── components/           # Componentes reutilizables (e.g., Carousel, HeaderCard)
+│   ├── components/dinamic/   # Componentes dinámicos (e.g., AboutUs, Events)
+│   ├── constants/            # Constantes (e.g., headersInfo)
+│   ├── public/               # Recursos estáticos
+│   ├── middleware.ts         # Middleware de Next.js
+│   ├── next.config.mjs       # Configuración de Next.js
+│   ├── package.json          # Dependencias del proyecto
+│   ├── tailwind.config.ts    # Configuración de Tailwind CSS
+│   ├── tsconfig.json         # Configuración de TypeScript
+│   └── README.md             # Documentación de la UI
+└── README.md                 # Documentación principal
+```
 
-Note: Update the folder names and structure based on the actual repository contents.
+---
 
-Installation
+## Instalación
 
-Prerequisites
+### Prerrequisitos
 
+- **Node.js** (versión 16 o superior recomendada)
+- **Git**
+- **Base de Datos** (especifica si usas una, e.g., MongoDB, MySQL)
 
+### Configuración del CMS
 
+1. Clona el repositorio:
 
+   ```bash
+   git clone https://github.com/sasamile/UNIMINUTO-CACTO.git
+   cd UNIMINUTO-CACTO/CMS-Centro-de-Arte-Cultura-Y-Tradicion-de-Oriente
+   ```
 
-Node.js (if using Node-based CMS or UI)
+2. Instala las dependencias:
 
+   ```bash
+   npm install
+   ```
 
+3. Configura las variables de entorno:
 
-[Database, e.g., MySQL/MongoDB] (specify version and setup requirements)
+   - Copia `.env.example` a `.env` y actualiza con las credenciales necesarias (e.g., base de datos, claves de API).
 
+   ```bash
+   cp .env.example .env
+   ```
 
+4. Inicia el servidor de desarrollo:
 
-Git
+   ```bash
+   npm run dev
+   ```
 
+### Configuración de la UI
 
+1. Navega al directorio de la UI:
 
-[Any other dependencies, e.g., Python, PHP]
+   ```bash
+   cd UNIMINUTO-CACTO/UI_Project
+   ```
 
-CMS Setup
+2. Instala las dependencias:
 
+   ```bash
+   npm install
+   ```
 
+3. Configura los endpoints de la API:
 
+   - Actualiza las URLs de la API en los archivos de configuración o constantes para apuntar al servidor CMS.
 
+4. Inicia el servidor de desarrollo:
 
-Clone the repository:
+   ```bash
+   npm run dev
+   ```
 
-git clone https://github.com/sasamile/UNIMINUTO-CACTO.git
-cd UNIMINUTO-CACTO/CMS-Centro-de-Arte-Cultura-Y-Tradicion-de-Oriente
+---
 
+## Uso
 
+### CMS
 
-Install dependencies:
+- Accede al panel de administración en `http://localhost:3000` (o el puerto configurado).
+- Inicia sesión con las credenciales de administrador.
+- Gestiona contenido como eventos, artículos y medios.
 
-npm install  # or specify the package manager, e.g., composer, pip
+### UI
 
+- Abre la UI en `http://localhost:3000` (o el puerto configurado).
+- Explora secciones como eventos, galerías, noticias y testimonios.
+- Asegúrate de que el servidor CMS esté activo para cargar contenido dinámico.
 
+---
 
-Configure environment variables:
+## Contribuir
 
+¡Tus contribuciones son bienvenidas! Sigue estos pasos:
 
+1. Haz un fork del repositorio.
 
+2. Crea una nueva rama:
 
+   ```bash
+   git checkout -b feature/tu-funcionalidad
+   ```
 
-Copy .env.example to .env and update with your database credentials and other settings.
+3. Realiza los cambios y haz commit:
 
-cp .env.example .env
+   ```bash
+   git commit -m "Añade tu funcionalidad"
+   ```
 
+4. Sube los cambios:
 
+   ```bash
+   git push origin feature/tu-funcionalidad
+   ```
 
-Set up the database:
+5. Abre un Pull Request en GitHub.
 
+Sigue el código de conducta y asegura que tu código cumpla con los estándares del proyecto.
 
+---
 
+## Licencia
 
+Este proyecto está licenciado bajo la **Licencia MIT**. Consulta el archivo LICENSE para más detalles.
 
-Run migrations or import the provided SQL file (specify commands).
+---
 
-[e.g., npm run migrate]
+## Contacto
 
+Para consultas, contacta a:
 
+- **Mantenedor**: \[Tu Nombre, e.g., sasamile\]
+- **Correo**: \[Tu Correo, e.g., sasamile@example.com\]
+- **Issues en GitHub**: https://github.com/sasamile/UNIMINUTO-CACTO/issues
 
-Start the CMS server:
+---
 
-npm start  # or specify the command
-
-UI Setup
-
-
-
-
-
-Navigate to the UI directory:
-
-cd UNIMINUTO-CACTO/UI_Project
-
-
-
-Install dependencies:
-
-npm install  # or specify the package manager
-
-
-
-Configure API endpoints:
-
-
-
-
-
-Update the API base URL in [e.g., src/config.js] to point to the CMS server.
-
-
-
-Start the development server:
-
-npm start  # or specify the command
-
-Usage
-
-CMS
-
-
-
-
-
-Access the admin panel at [e.g., http://localhost:3000/admin] (specify URL).
-
-
-
-Log in with admin credentials (set up during installation).
-
-
-
-Use the dashboard to manage content, such as adding events or uploading media.
-
-UI
-
-
-
-
-
-Open the UI at [e.g., http://localhost:4200] (specify URL).
-
-
-
-Browse cultural events, view galleries, or interact with forms.
-
-
-
-Ensure the CMS server is running to fetch dynamic content.
-
-Contributing
-
-Contributions are welcome! To contribute:
-
-
-
-
-
-Fork the repository.
-
-
-
-Create a new branch (git checkout -b feature/your-feature).
-
-
-
-Make changes and commit (git commit -m "Add your feature").
-
-
-
-Push to your branch (git push origin feature/your-feature).
-
-
-
-Open a Pull Request on GitHub.
-
-Please follow the code of conduct and ensure your code adheres to the project's coding standards.
-
-License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-Contact
-
-For inquiries, contact:
-
-
-
-
-
-Maintainer: [Your Name, e.g., sasamile]
-
-
-
-Email: [Your Email, e.g., sasamile@example.com]
-
-
-
-GitHub Issues: [https://github.com/sasamile/UNIMINUTO-CACTO/issues]
-
-
-
-Developed as part of UNIMINUTO's Centro de Cultura, Arte y Tradiciones de Oriente initiative.
+*Desarrollado como parte de la iniciativa del Centro de Cultura, Arte y Tradiciones de Oriente de UNIMINUTO.* 🖌️
